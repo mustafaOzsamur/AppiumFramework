@@ -16,7 +16,7 @@ public class Driver {
     static final String PLATFORM="Android";
     static final String OTOMASYON_ISMI="UiAutomator2";
 
-    public static AndroidDriver getAndroidDriver()  {
+    public static AndroidDriver getAndroidDriver(String appPackage,String appActivity)  {
         URL appiumServerURL = null;
         try {
             appiumServerURL = new URL("http:127.0.0.1:4723/wd/hub");
@@ -31,8 +31,8 @@ public class Driver {
             caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, ANDROIDVERSION);
             caps.setCapability(MobileCapabilityType.PLATFORM_NAME, PLATFORM);
             caps.setCapability(MobileCapabilityType.AUTOMATION_NAME, OTOMASYON_ISMI);
-            caps.setCapability("appPackage","");
-            caps.setCapability("appActivity","");
+            caps.setCapability("appPackage",appPackage);
+            caps.setCapability("appActivity",appActivity);
             //  caps.setCapability(MobileCapabilityType.NO_RESET,false); // true uygulama sifirlanmiyor onceki adimlari muhafaza ediyor
             //false ise her test baslangicinda sifirliyor
 
