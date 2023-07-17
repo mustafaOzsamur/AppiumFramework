@@ -13,5 +13,7 @@ public class DriverDeneme {
     @Test
     public void test01(){
         System.out.println(driver.getDeviceTime());
+
+
     }
 }
