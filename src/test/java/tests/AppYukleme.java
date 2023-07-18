@@ -22,7 +22,7 @@ public class AppYukleme {
         capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
         //app capabilityType bir uygulamayi yüklemek istedigimizde indirdigimiz apk dosyasinin path uzantisini vererek
         // o uygulamayi yüklemek icin kullandigimiz DesierdCapability
-        capabilities.setCapability(MobileCapabilityType.APP, "C:\\Users\\musta\\IdeaProjects\\AppiumProject\\Apps\\arabam.com_4.8.0_Apkpure.apk");
+        capabilities.setCapability(MobileCapabilityType.APP, "C:\\Users\\musta\\IdeaProjects\\AppiumProject\\Apps\\Kiwi.com - Book Cheap Flights_2023.26.0_Apkpure.apk");
 
         driver = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
